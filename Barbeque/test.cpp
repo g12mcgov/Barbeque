@@ -1,29 +1,21 @@
+#include "barbeque.h"
+
+
 #include <iostream>
 #include <string>
 #include <curl/curl.h>
 
+using namespace std;
 
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
+
+int main()
 {
-    ((std::string*)userp)->append((char*)contents, size * nmemb);
-    return size * nmemb;
+    string url;
+
+    cout << "Please input a URL" << endl;
+    cin >> url;
+
+    Barbeque* bbq = new Barbeque();
+    string response = bbq->get(url);
 }
 
-int main(void)
-{
-  CURL *curl;
-  CURLcode res;
-  std::string readBuffer;
-
-  curl = curl_easy_init();
-  if(curl) {
-    curl_easy_setopt(curl, CURLOPT_URL, "http://api.wunderground.com/api/8bb93b6670e3f3de/forecast/q/CA/San_Francisco.json");
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
-    res = curl_easy_perform(curl);
-    curl_easy_cleanup(curl);
-
-    std::cout << readBuffer << std::endl;
-  }
-  return 0;
-}
