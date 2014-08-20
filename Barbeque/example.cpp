@@ -33,9 +33,12 @@ int main()
     params["client_id"] = "So5KnMdtB8V1R0CvSfS8u";
     params["client_secret"] = "8aGQkpCIjzaVdMWDZJT2iWRmP1KvlSic5kE5lIGq";
 
+    map<string, string> headers;
+    headers["Content-type"] = "application/json";
+
 
     Barbeque* bbq = new Barbeque();
     string response1 = bbq->get(url);
-    string response2 = bbq->post(url, params);
+    string response2 = bbq->post(url, params, headers);
 }
 
