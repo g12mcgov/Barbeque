@@ -22,10 +22,10 @@ Then:
 
 Run:
   <code>
-  ./configure
-  make
-  make test
-  sudo make install
+  - ./configure
+  - make
+  - make test
+  - sudo make install
   </code>
 
 Assuming everything went OK, libcurl should now be installed.
