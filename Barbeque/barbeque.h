@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <curl/curl.h>
+#include <map>
 
 using namespace std;
 
@@ -20,11 +21,8 @@ public:
     ~Barbeque();
 
     // Actual Methods 
-    string get(string url);
-    //string post(string url);
-
-    // Helping Methods
-    //size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
+    string get(string &url);
+    string post(string &url, map<string, string> &params);
 };
 
 #endif
