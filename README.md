@@ -21,10 +21,12 @@ Then:
   2. <code>cd</code> into the newly created directory <code>curl-7.XX.XX</code>
 
 Run:
-  <code>./configure</code>
-  <code>make</code>
-  <code>make test</code>
-  <code>sudo make install</code>
+  <code>
+  ./configure
+  make
+  make test
+  sudo make install
+  </code>
 
 Assuming everything went OK, libcurl should now be installed.
 
