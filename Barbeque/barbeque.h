@@ -1,3 +1,17 @@
+/**********************************************************/
+//                     Barbeque.h                          //
+//                                                         //
+// ~ This files defines the class structure for Barbeque ~ //
+//                                                         //
+//                                                         //
+//   Author: Grant McGovern                                //
+//   Email: grantmcgovern.mcgovern@gmail.com               //
+//                                                         //
+//   Date: 20 August 2014                                  //
+//                                                         //
+//                                                         //
+/***********************************************************/
+
 #ifndef barbeque_h
 #define barbeque_h
 
@@ -27,11 +41,13 @@ public:
         string get(string &url, map<string, string> &params);
         string get(string &url, map<string, int> &params);
         string get(string &url, map<int, string> &params);
-    string get(string &url, map<int, int> &params);
+        string get(string &url, map<int, int> &params);
 
-    string post(string &url, string &data);
-    string post(string &url, map<string, string> &params);
-    string post(string &url, map<string, string> &params, map<string, string> &headers_map);
+    // POST methods:
+
+        string post(string &url, string &data);
+        string post(string &url, map<string, string> &params);
+        string post(string &url, map<string, string> &params, map<string, string> &headers_map);
 
     inline unsigned int  HttpStatus() const { return http_status; }
 
