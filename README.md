@@ -9,3 +9,30 @@ HTTP requests shouldn't be hard. While C++ does not have a native library, there
 
 Barbeque is based on libcurl, the C++ HTTP request library, and wraps it in an easy to use fashion. Each method returns a string (of you content) which you can then use against your favorite JSON parser.
 
+Installation
+========
+
+You must first install <code>libcurl</code> as it is the basis for Barbeque.
+
+Go here: http://curl.haxx.se/download.html to download the latest source archive.
+
+Then:
+  1. Expand the tarball <code>tar -xvf curl-7.XX.XX.tar</code>
+  2. <code>cd</code> into the newly created directory <code>curl-7.XX.XX</code>
+
+Run:
+  - <code>./configure</code>
+  - <code>make</code>
+  - <code>make test</code>
+  - <code>sudo make install</code>
+
+
+Assuming everything went OK, libcurl should now be installed.
+
+Now:
+
+<code>git clone https://github.com/g12mcgov/Barbeque.git</code>
+
+
+
+
