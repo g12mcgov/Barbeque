@@ -21,12 +21,25 @@ public:
     // Destructor 
     ~Barbeque();
 
-    // Actual Methods 
-    string get(string &url);
+    // GET methods:
+
+        string get(string &url);
+        string get(string &url, map<string, string> &params);
+        string get(string &url, map<string, int> &params);
+        string get(string &url, map<int, string> &params);
+    string get(string &url, map<int, int> &params);
+
+    string post(string &url, string &data);
     string post(string &url, map<string, string> &params);
     string post(string &url, map<string, string> &params, map<string, string> &headers_map);
 
     inline unsigned int  HttpStatus() const { return http_status; }
+
+    struct postData
+    {
+        const char *readptr;
+        long sizeleft;
+    };
 
 private:
     // To store response codes from HTTP Request

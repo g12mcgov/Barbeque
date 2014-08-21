@@ -35,10 +35,12 @@ int main()
 
     map<string, string> headers;
     headers["Content-type"] = "application/json";
-
+ 
 
     Barbeque* bbq = new Barbeque();
-    string response1 = bbq->get(url);
-    string response2 = bbq->post(url, params, headers);
+    string response1 = bbq->get(url, params);
+    //string response2 = bbq->post(url, params);
+
+    cout << response1 << endl;
 }
 
