@@ -42,8 +42,9 @@ Documentation
 Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. To do the following please look at the documentation below:
 
 <code>[ GET ]</code>
-
-  ### Example:
+  
+  Example:
+  ------
 
     int main()
     {
@@ -66,7 +67,8 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
   <code>client_secret</code>
     
   
-  ### Example:
+  Example:
+  ------
 
     #include <map>
     ...
