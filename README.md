@@ -45,11 +45,54 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
 
     int main()
     {
-    string url = "http://api.aerisapi.com/observations/20015/";
-    // Create Barbeque object
-    Barbeque* bbq = new Barbeque();
-    // Pass in our URL
-    string response1 = bbq->get(url);
+      string url = "http://api.aerisapi.com/observations/20015/";
+      
+      // Create Barbeque object
+      Barbeque* bbq = new Barbeque();
+      
+      // Pass in our URL
+      string response1 = bbq->get(url);
     }
+  
+  Simply declare the Barbeque object (I strongly suggest doing so dynamically), and use it as shown in the example. The <code>GET</code> method expects a string to be passed.
+  
+<code>[ PUSH ]</code>
 
+  The PUSH method expects a <code><b><map></b></code> to be passed in as the argument. This way, you can construct Key/Value pairs for APIs. For instance, the example below shows a scenario where the given API requires 2 parameters.
+  
+  <code>client_id</code>
+  <code>client_secret</code>
 
+    #include <map>
+    ...
+      
+    int main()
+    {
+      string url = "http://api.aerisapi.com/observations/20015/";
+      
+      // Construct a map for our JSON params. Much like a Python Dict
+      map<string, string> params;
+      
+      // Populate the map
+      params["client_id"] = "#######";
+      params["client_secret"] = "########";
+      
+      // Construct our [optional] headers map
+      map<string, string> headers;
+      
+      // Populate the map
+      headers["Content-type"] = "application/json";
+      
+      // Declare a new Barbeque object
+      Barbeque* bbq = new Barbeque();
+      
+      // Here we call it with no headers
+      string response1 = bbq->post(url, params);
+      
+      // Optionally (and alternatively), we can add headers.
+      string response2 = bbq->post(url, params, headers);
+    }
+    
+    Simply declare the Barbeque object (I strongly suggest doing so dynamically), and use it as shown in the example. The <code>POST</code> method has been overloaded to also accept headers.
+    
+  Happy HTTP requesting!
