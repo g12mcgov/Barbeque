@@ -43,6 +43,8 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
 
 <code>[ GET ]</code>
 
+  ### Example:
+
     int main()
     {
       string url = "http://api.aerisapi.com/observations/20015/";
@@ -62,6 +64,9 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
   
   <code>client_id</code><br>
   <code>client_secret</code>
+    
+  
+  ### Example:
 
     #include <map>
     ...
@@ -93,6 +98,6 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
       string response2 = bbq->post(url, params, headers);
     }
     
-    Simply declare the Barbeque object (I strongly suggest doing so dynamically), and use it as shown in the example. The <code>POST</code> method has been overloaded to also accept headers.
+  Simply declare the Barbeque object (I strongly suggest doing so dynamically), and use it as shown in the example. The <code>POST</code> method has been overloaded to also accept headers.
     
   Happy HTTP requesting!
