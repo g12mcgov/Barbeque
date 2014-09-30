@@ -43,14 +43,14 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
 
 <code>[ GET ]</code>
   '''
-  int main()
-  {
-    string url = "http://api.aerisapi.com/observations/20015/";
+    int main()
+    {
+      string url = "http://api.aerisapi.com/observations/20015/";
 
-    // Create Barbeque object
-    Barbeque* bbq = new Barbeque();
-    // Pass in our URL
-    string response1 = bbq->get(url);
-  }
+      // Create Barbeque object
+      Barbeque* bbq = new Barbeque();
+      // Pass in our URL
+      string response1 = bbq->get(url);
+    }
   '''
 
