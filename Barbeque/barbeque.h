@@ -49,7 +49,9 @@ public:
         string post(string &url, map<string, string> &params);
         string post(string &url, map<string, string> &params, map<string, string> &headers_map);
 
-    inline unsigned int  HttpStatus() const { return http_status; }
+    inline unsigned int  HttpStatus() const { 
+        return http_status; 
+    }
 
     struct postData
     {
