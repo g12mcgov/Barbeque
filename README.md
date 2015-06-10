@@ -48,7 +48,7 @@ Documentation
 ========
 Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. To do the following please look at the documentation below:
 
-<code>[ GET ]</code>
+## **GET**:
   
   Example:
   ------
@@ -68,9 +68,9 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
   
   Simply declare the Barbeque object (I strongly suggest doing so dynamically), and use it as shown in the example. The <code>GET</code> method expects a string to be passed.
   
-<code>[ PUSH ]</code>
+## **POST**:
 
-  The PUSH method expects a <code><b><map></b></code> to be passed in as the argument. This way, you can construct Key/Value pairs for APIs. For instance, the example below shows a scenario where the given API requires 2 parameters.
+  The `POST` method expects a <code><b><map></b></code> to be passed in as the argument. This way, you can construct Key/Value pairs for APIs. For instance, the example below shows a scenario where the given API requires 2 parameters.
   
   <code>client_id</code><br>
   <code>client_secret</code>
