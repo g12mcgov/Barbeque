@@ -33,9 +33,16 @@ Now:
 
 <code>git clone https://github.com/g12mcgov/Barbeque.git</code>
 
-Move thee cloned files into your local directory and finally:
+Move the cloned files into your local directory and finally:
 
 <code>#include "barbeque.h"</code>
+
+
+You must now link against libcurl and use C++ 11 when you compile:
+
+```bash
+$ g++ main.cpp barbeque.cpp -lcurl -std=c++0x -o barbeque
+```
 
 Documentation
 ========
