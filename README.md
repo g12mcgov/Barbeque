@@ -70,7 +70,7 @@ Currently Barbeque supports <code>GET</code> and <code>POST</code> operations. T
   
 ## **POST**:
 
-  The `POST` method expects a <code><b><map></b></code> to be passed in as the argument. This way, you can construct Key/Value pairs for APIs. For instance, the example below shows a scenario where the given API requires 2 parameters.
+  The `POST` method expects a `<map>` to be passed in as the argument. This way, you can construct Key/Value pairs for APIs. For instance, the example below shows a scenario where the given API requires 2 parameters.
   
   <code>client_id</code><br>
   <code>client_secret</code>
