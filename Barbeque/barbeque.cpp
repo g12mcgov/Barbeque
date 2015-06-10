@@ -61,7 +61,7 @@ static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *use
 
 /* GET methods */
 
-auto Barbeque::get(string &url)
+string Barbeque::get(string &url)
 {   
     // Clear out the HTTP status
     http_status = 0;
